@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Anek+Devanagari:wght@100&display=swap');
+:root{
+    --Anek: 'Anek Devanagari';
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: grey;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    height: 100vh;
+}
+p{
+    font-size: 2rem;
+    line-height: 3rem;
+    font-family: var(--Anek);
+    font-weight: 600;
+}
