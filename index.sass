@@ -2,7 +2,18 @@
 
 $black: #000
 $white: #fff
-$Anek: 'Anek Devanagari'
+$gray: rgb(215, 214, 214)
+
+$red: hsl(0, 78%, 62%)
+$cyan: hsl(180, 62%, 55%)
+$orange: hsl(34, 97%, 64%)
+$blue: hsl(212, 86%, 64%)
+$varyDarkBlue: hsl(234, 12%, 34%)
+$grayishBlue: hsl(229, 6%, 66%)
+$veryLightGray: hsl(0, 0%, 98%)
+$weight1: 200
+$weight2: 400
+$weight3: 600
 
 $hero-section-loaders-color: ( #CAD8DE,#00F6ED, #0F1108)
 
@@ -11,6 +22,31 @@ $hero-section-loaders-color: ( #CAD8DE,#00F6ED, #0F1108)
     padding: 0
     box-sizing: border-box
 
+// Loader
+.loader
+    width: 100%
+    height: 100vh
+    position: fixed
+    top: 0
+    left: 0
+    transition: 0.6s
+    animation: loader 0.5s forwards 3s ease-in-out
+    @keyframes loader
+        0%
+            transform: translateX(0)
+        100%
+            transform: translateX(-100%)
+    @for $i from 1 through 3
+        &:nth-child(3n + #{$i})
+            background-color: nth($hero-section-loaders-color , $i)
+    @for $i from 1 through 3
+        &:nth-child(3n + #{$i})
+            animation-delay: $i * 0.3s
+    @for $i from 1 through 3
+        &:nth-child(3n + #{$i})
+            z-index: 4 - $i
+
+// social media icons
 .social-media-icons
     display: flex
 
@@ -46,7 +82,6 @@ header
                         a
                             text-decoration: none
                             color: $black
-                            font-family: $Anek
                             font-size: 1.2rem
                             font-weight: 600
                             letter-spacing: 1px
@@ -72,6 +107,7 @@ header
         align-items: flex-start
         flex-direction: column
         padding: 10px 60px
+        position: relative
         h2
             color: $white
             font-size: 2.5rem
@@ -98,92 +134,230 @@ header
                 &:nth-child(2)
                     background: $white
                     color: $black
-    .hero-section-loader
-        width: 100%
-        height: 100%
-        position: absolute
-        transition: 0.6s
-        animation: loader 0.5s forwards 3s ease-in-out
-        @keyframes loader
-            0%
-                transform: translateX(0)
-            100%
-                transform: translateX(-100%)
-        @for $i from 1 through 3
-            &:nth-child(3n + #{$i})
-                background-color: nth($hero-section-loaders-color , $i)
-        @for $i from 1 through 3
-            &:nth-child(3n + #{$i})
-                animation-delay: $i * 0.3s
-        @for $i from 1 through 3
-            &:nth-child(3n + #{$i})
-                z-index: 4 - $i
 
-.services
-    width: 100%
-    margin: 50px 0
-    padding: 40px 30px
+.about
     display: flex
     justify-content: center
     align-items: center
-    .skill-card
+    flex-direction: column
+    margin: 40px 0
+    padding: 20px 20px
+    .heading
+        h2
+            // font-weight: 600
+        p
+    .about-text
         position: relative
-        padding: 20px
-        width: 15em
-        background-color: #FFF
-        box-shadow: 0 1px 3px rgba(0, 0, 0, .12), 0 1px 2px rgba(0, 0, 0, .24)
-        cursor: pointer
-        &:hover
-            box-shadow: 0 14px 28px rgba(0, 0, 0, .25), 0 10px 10px rgba(0, 0, 0, .22)
-            .skill-card__header
-                height: 40px
-                .skill-card__icon
-                    transform: translateX(-50%) translateY(-50%) scale(3)
-            .skill-card__body
-                height: 170px
-                .skill-card__knowledge
-                    li
-                        transform: translateX(0)
-                        transition-timing-function: cubic-bezier(0, 1.5, 1, 1)
-                        transition-duration: .5s
-                        @for $i from 1 through 6
-                            &:nth-child(#{$i})
-                                transition-delay: $i * .25s
-        .skill-card__header
-            position: relative
-            background-color: lighten(#E95A28, 5)
-            height: 170px
-            margin: -20px -20px 20px -20px
-            transition: height .5s
-            overflow: hidden
-            .skill-card__icon
-                position: absolute
-                top: 50%
-                left: 50%
-                transform: translateY(-50%) translateX(-50%)
-                display: block
-                width: 128px
-                height: 128px
-                transition: transform .5s
-        .skill-card__body
-            height: 40px
-            transition: height .5s
-            overflow: hidden
-            .skill-card__title
-                font-size: 1.4em
+        overflow: hidden
+        padding: 20px 20px
+        &::before
+            content: ''
+            position: absolute
+            top: 0
+            left: 0
+            width: 12%
+            height: 50%
+            border-top: 2px solid $black
+            border-left: 2px solid $black
+            z-index: -1
+        &::after
+            content: ''
+            position: absolute
+            right: 0
+            bottom: 0
+            width: 12%
+            height: 50%
+            border-bottom: 2px solid $black
+            border-right: 2px solid $black
+            z-index: -1
+        p
+            text-align: center
+            .company-name
                 font-weight: 600
-                text-transform: uppercase
-            .skill-card__duration
-                color: #9E9E9E
-                font-style: italic
-            .skill-card__knowledge
-                margin-top: 10px
-                color: #424242
-                li
-                    margin-top: 5px
-                    transition-duration: 0
-                    transition-delay: .5s
-                    transform: translateX(-100%)
+
+.heading
+    width: 100%
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-direction: column
+    padding: 40px 0px
+
+.services
+    position: relative
+    width: 100%
+    min-height: 100vh
+    background: $gray
+    display: flex
+    justify-content: center
+    align-items: center
+    overflow: hidden
+    .cards
+        position: absolute
+        left: 40px
+        width: 260px
+        height: 470px
+        display: flex
+        justify-content: center
+        align-items: center
+        flex-wrap: wrap
+        border-radius: 5px
+        box-shadow: 2px 2px 2px rgba(0, 0, 0,0.3 ), -2px -2px 2px rgba(0, 0, 0,0.3 )
+        overflow: hidden
+        background: $white
+        @for $i from 1 through 5
+            &:nth-child(#{$i})
+                left: 200px - ($i * 40)
+        .imgs
+            width: 100%
+            height: 70%
+            display: flex
+            justify-content: center
+            align-items: center
+            overflow: hidden
+            img
+                object-fit: fill
+                position: relative
+                width: 100%
+        .text
+            width: 100%
+            height: 30%
+            padding: 0px 15px
+            overflow: hidden
+            h2
+                font-size: 1.5rem
+                font-weight: 600
+                color: $black
+            p
+                font-size: 0.9rem
+                color: gray
+            a
+                color: blue
+                text-decoration: none
+// project counters
+.container
+    .counter-box
+        display: block
+        background: #f6f6f6
+        padding: 40px 20px 37px
+        text-align: center
+        p
+            margin: 5px 0 0
+            padding: 0
+            color: #909090
+            font-size: 18px
+            font-weight: 500
+        i
+            font-size: 60px
+            margin: 0 0 15px
+            color: #d2d2d2
+        .counter
+            display: block
+            font-size: 32px
+            font-weight: 700
+            color: #666
+            line-height: 28px
+    .counter-box.colored
+        background: #3acf87
+    .counter-box.colored
+        p, i, .counter
+            color: #fff
+
+.row1-container
+    .box
+        width: 300px
+        border-radius: 5px
+        box-shadow: 0px 30px 40px -20px $grayishBlue
+        padding: 30px
+        margin: 20px
+        h2
+            color: $varyDarkBlue
+            font-weight: $weight3
+        p
+            color: $grayishBlue
+        img
+            float: right
+    .cyan
+        border-top: 3px solid $cyan
+    .red
+        border-top: 3px solid $red
+    .blue
+        border-top: 3px solid $blue
+.row2-container
+    .box
+        width: 300px
+        border-radius: 5px
+        box-shadow: 0px 30px 40px -20px $grayishBlue
+        padding: 30px
+        margin: 20px
+    .orange
+        border-top: 3px solid $orange
+
+.contact-information
+    margin: 60px 0px
+    background: $gray
+    .row
+        padding: 20px 20px
+        display: flex
+        justify-content: center
+        align-items: center
+        .col-sm-6, .col-sm-2
+            display: flex
+            justify-content: center
+            align-items: center
+            flex-direction: column
+            background: $white
+            padding: 10px 20px
+            margin: 0 10px
+            gap: 20px
+            p
+                text-align: center
+            svg
+                width: 60px
+                height: 60px
+
+footer
+    background: #212529
+    .text-small
+        font-size: 0.9rem
+    a
+        color: inherit
+        text-decoration: none
+        transition: all 0.3s
+        &:hover, &:focus
+            text-decoration: none
+    .form-control
+        background: #212529
+        border-color: #545454
+        &:focus
+            background: #212529
+
+@media (min-width: 950px)
+    .row1-container
+        display: flex
+        justify-content: center
+        align-items: center
+
+    .row2-container
+        display: flex
+        justify-content: center
+        align-items: center
+
+    .box-down
+        position: relative
+        top: 150px
+
+    .box
+        width: 20%
+
+@media (max-width: 450px)
+    .box
+        height: 200px
+
+@media (max-width: 950px) and (min-width: 450px)
+    .box
+        text-align: center
+        height: 180px
 
 @media (max-width: 700px)
     .social-media-icons

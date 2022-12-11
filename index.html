@@ -21,8 +21,21 @@
       integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
       crossorigin="anonymous"
     />
+<!-- Anek devanagari google fonts cdn -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Anek+Devanagari:wght@200&display=swap" rel="stylesheet">
+<!-- font family style to all text -->
+    <style>
+      body{
+        font-family: 'Anek Devanagari';
+      }
+    </style>
   </head>
   <body>
+    <!-- Loader -->
+    <!-- <div class="loader"></div>
+    <div class="loader"></div>
+    <div class="loader"></div> -->
     <!-- social -->
     <div class="container-fluid d-flex pt-2">
       <div class="container d-flex gap-5">
@@ -63,9 +76,6 @@
     </header>
     <!-- Hero Section -->
     <section class="hero-section">
-      <div class="hero-section-loader"></div>
-      <div class="hero-section-loader"></div>
-      <div class="hero-section-loader"></div>
       <div class="hero-section-content">
         <h2>
           A place where you reliable <br />
@@ -83,28 +93,292 @@
         </div>
       </div>
     </section>
-    <section class="services">
-      <div class="skill-card">
-        <header class="skill-card__header">
-          <img
-            class="skill-card__icon"
-            src="https://upload.wikimedia.org/wikipedia/commons/3/38/HTML5_Badge.svg"
-            alt="HTML5 Logo"
-          />
-        </header>
-        <section class="skill-card__body">
-          <h2 class="skill-card__title">html</h2>
-          <span class="skill-card__duration">6 ans d'expérience</span>
-          <ul class="skill-card__knowledge">
-            <li>HTML5</li>
-            <li>Sémantique</li>
-            <li>SVG</li>
-            <li>Canvas</li>
-          </ul>
-        </section>
+    <!-- About -->
+    <section class="container about">
+      <div class="heading">
+        <h2>About us</h2>
+        <p>For you, who are we</p>
+      </div>
+      <div class="about-text container">
+        <p>
+          All of you are Welcome in
+          <span class="company-name">Perfect HVAC Solutions</span>Company<br /> <br/>
+          The Company was founded in 2021 and operates as Daikin dealer from
+          Delhi.
+          We a <span class="company-name">Perfect HVAC Solutions</span> are
+          equipped with technical and organizational effciencies needed to help
+          construction companies / clients to fulfill their ambitious mechanical
+          ventilation and air conditioning requirements.
+          <span class="company-name">Perfect HVAC Solutions</span> in the
+          design, supply, instalation, commissioning and service of all
+          mechanical services and Heating, ventilation and air conditioning
+          (HVAC) systems.
+        </p>
       </div>
     </section>
+    <!-- services -->
+    <div class="heading">
+      <h2>Our Service</h2>
+      <p>Service that you need</p>
+    </div>
+    <section class="services">
+      <div class="cards card1">
+        <div class="imgs">
+          <img src="./assets/images/4.jpg" alt="" class="img-fluid" />
+        </div>
+        <div class="text">
+          <h2>Main Service</h2>
+          <p>
+            Traditional marketing is becoming less and less effective by the
+            minute
+            <!-- as a forward-thinking marketer, you know there has to be a
+            better way. -->
+          </p>
+          <a href="#">Read More...</a>
+        </div>
+      </div>
+      <div class="cards card2">
+        <div class="imgs">
+          <img src="./assets/images/4.jpg" alt="" class="img-fluid" />
+        </div>
+        <div class="text">
+          <h2>Main Service</h2>
+          <p>
+            Traditional marketing is becoming less and less effective by the
+            minute
+            <!-- as a forward-thinking marketer, you know there has to be a
+            better way. -->
+          </p>
+          <a href="#">Read More...</a>
+        </div>
+      </div>
+      <div class="cards card3">
+        <div class="imgs">
+          <img src="./assets/images/4.jpg" alt="" class="img-fluid" />
+        </div>
+        <div class="text">
+          <h2>Main Service</h2>
+          <p>
+            Traditional marketing is becoming less and less effective by the
+            minute
+            <!-- as a forward-thinking marketer, you know there has to be a
+            better way. -->
+          </p>
+          <a href="#">Read More...</a>
+        </div>
+      </div>
+      <div class="cards card4">
+        <div class="imgs">
+          <img src="./assets/images/4.jpg" alt="" class="img-fluid" />
+        </div>
+        <div class="text">
+          <h2>Main Service</h2>
+          <p>
+            Traditional marketing is becoming less and less effective by the
+            minute
+            <!-- as a forward-thinking marketer, you know there has to be a
+            better way. -->
+          </p>
+          <a href="#">Read More...</a>
+        </div>
+      </div>
+    </section>
+    <!-- project counteres -->
+    <div class="container my-5">
+      <div class="heading">
+        <h2>Project that we completed till now</h2>
+        <p>Huge number of our Happy clients</p>
+      </div>
+      <div class="row">
+        <div class="four col-md-3">
+          <div class="counter-box colored">
+            <i class="fa fa-thumbs-o-up"></i>
+            <span class="counter">2147</span>
+            <p>Happy Customers</p>
+          </div>
+        </div>
+        <div class="four col-md-3">
+          <div class="counter-box">
+            <i class="fa fa-group"></i>
+            <span class="counter">3275</span>
+            <p>Registered Members</p>
+          </div>
+        </div>
+        <div class="four col-md-3">
+          <div class="counter-box">
+            <i class="fa fa-shopping-cart"></i>
+            <span class="counter">289</span>
+            <p>Available Products</p>
+          </div>
+        </div>
+        <div class="four col-md-3">
+          <div class="counter-box">
+            <i class="fa fa-user"></i>
+            <span class="counter">1563</span>
+            <p>Saved Trees</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- testimonial -->
+    <section class="testimonial container-fluid my-5">
+      <div class="heading">
+        <h2>Testimonial</h2>
+        <p>User reviews who are statisfied with our services</p>
+      </div>
+      <div class="row1-container">
+        <div class="box box-down cyan">
+          <h2>Supervisor</h2>
+          <p>Monitors activity to identify project roadblocks</p>
+          <img
+            src="https://assets.codepen.io/2301174/icon-supervisor.svg"
+            alt=""
+          />
+        </div>
+
+        <div class="box red">
+          <h2>Team Builder</h2>
+          <p>
+            Scans our talent network to create the optimal team for your project
+          </p>
+          <img
+            src="https://assets.codepen.io/2301174/icon-team-builder.svg"
+            alt=""
+          />
+        </div>
+
+        <div class="box box-down blue">
+          <h2>Calculator</h2>
+          <p>
+            Uses data from past projects to provide better delivery estimates
+          </p>
+          <img
+            src="https://assets.codepen.io/2301174/icon-calculator.svg"
+            alt=""
+          />
+        </div>
+      </div>
+      <div class="row2-container">
+        <div class="box orange">
+          <h2>Karma</h2>
+          <p>Regularly evaluates our talent to ensure quality</p>
+          <img src="https://assets.codepen.io/2301174/icon-karma.svg" alt="" />
+        </div>
+      </div>
+    </section>
+    <!-- contact information -->
+    <section class="container-fluid contact-information">
+      <div class="heading">
+        <h2>Contact information</h2>
+        <p>Easy to connect with us</p>
+      </div>
+      <div class="row">
+        <div class="col-sm-2">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+            <path
+              d="M80 0C44.7 0 16 28.7 16 64V448c0 35.3 28.7 64 64 64H304c35.3 0 64-28.7 64-64V64c0-35.3-28.7-64-64-64H80zm80 432h64c8.8 0 16 7.2 16 16s-7.2 16-16 16H160c-8.8 0-16-7.2-16-16s7.2-16 16-16z"
+            />
+          </svg>
+          <p>email@gmail.com</p>
+        </div>
+        <div class="col-sm-2">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+            <path
+              d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48H48zM0 176V384c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V176L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z"
+            />
+          </svg>
+          <p>+91 8909128389</p>
+        </div>
+        <div class="col-sm-6">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+            <path
+              d="M575.8 255.5c0 18-15 32.1-32 32.1h-32l.7 160.2c.2 35.5-28.5 64.3-64 64.3H128.1c-35.3 0-64-28.7-64-64V287.6H32c-18 0-32-14-32-32.1c0-9 3-17 10-24L266.4 8c7-7 15-8 22-8s15 2 21 7L564.8 231.5c8 7 12 15 11 24zM352 224c0-35.3-28.7-64-64-64s-64 28.7-64 64s28.7 64 64 64s64-28.7 64-64zm-96 96c-44.2 0-80 35.8-80 80c0 8.8 7.2 16 16 16H384c8.8 0 16-7.2 16-16c0-44.2-35.8-80-80-80H256z"
+            />
+          </svg>
+          <p>
+            H. no. - 890, B Block, Gopal Nagar, Najafgarh, New Delhi - 110043
+          </p>
+        </div>
+      </div>
+    </section>
+    <!-- Footer -->
+    
+
+      <!-- FOOTER -->
+      <footer class="w-100 py-4 flex-shrink-0">
+        <div class="container py-4">
+          <div class="row gy-4 gx-5">
+            <div class="col-lg-6 col-md-6">
+              <h5 class="h1 text-white">FB.</h5>
+              <p class="small text-muted">
+                All of you are Welcome in
+          <span class="company-name">Perfect HVAC Solutions </span>Company.
+          The Company was founded in 2021 and operates as Daikin dealer from
+          Delhi.We a <span class="company-name">Perfect HVAC Solutions</span> are
+          equipped with technical and organizational effciencies needed to help
+          construction companies / clients to fulfill their ambitious mechanical
+          ventilation and air conditioning requirements.
+              </p>
+              <p class="small text-muted mb-0">
+                &copy; Copyrights. All rights reserved.
+              </p>
+            </div>
+            <!-- <div class="col-lg-2 col-md-6">
+              <h5 class="text-white mb-3">Quick links</h5>
+              <ul class="list-unstyled text-muted">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Get started</a></li>
+                <li><a href="#">FAQ</a></li>
+              </ul>
+            </div> -->
+            <div class="col-lg-2 col-md-6">
+              <h5 class="text-white mb-3">Quick links</h5>
+              <ul class="list-unstyled text-muted">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Projects</a></li>
+                <li><a href="#">Contact</a></li>
+              </ul>
+            </div>
+            <div class="col-lg-4 col-md-6">
+              <h5 class="text-white mb-3">Follow us</h5>
+            <div
+        class="container gap-5 justify-content-end align-items-center social-media-icons"
+      >
+        <i class="bi bi-linkedin"></i>
+        <i class="bi bi-instagram"></i>
+        <i class="bi bi-twitter"></i>
+        <i class="bi bi-whatsapp"></i>
+        <i class="bi bi-facebook"></i>
+        <i class="bi bi-meta"></i>
+      </div>
+        </div>
+      </footer>
+    </div>
     <!-- Javascript -->
     <script src="./index.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+      $(document).ready(function () {
+  $(".counter").each(function () {
+    $(this)
+      .prop("Counter", 0)
+      .animate(
+        {
+          Counter: $(this).text(),
+        },
+        {
+          duration: 4000,
+          easing: "swing",
+          step: function (now) {
+            $(this).text(Math.ceil(now));
+          },
+        }
+      );
+  });
+});
+    </script>
   </body>
 </html>
