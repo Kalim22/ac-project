@@ -118,7 +118,7 @@ header nav div:nth-child(2) ul li a {
   justify-content: center;
   align-items: flex-start;
   flex-direction: column;
-  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url("./assets/images/2.jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("./assets/images/2.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
@@ -207,6 +207,7 @@ header nav div:nth-child(2) ul li a {
 }
 .about .about-text p .company-name {
   font-weight: 600;
+  color: hsl(212deg, 86%, 64%);
 }
 
 .heading {
