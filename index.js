@@ -40,7 +40,7 @@ let btns = document.querySelector(".btns");
 window.addEventListener("scroll", () => {
   let scroll = window.pageYOffset;
   let scrollVal = scroll * 0.5;
-  let scrollOpacityVal = scroll * 0.0022;
+  let scrollOpacityVal = scroll * 0.0025;
 
   if (window.pageYOffset > 1) {
     heroSectionContent.style.opacity = ` ${1 - scrollOpacityVal}`;
